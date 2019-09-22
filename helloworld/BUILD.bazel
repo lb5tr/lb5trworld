@@ -1,0 +1,11 @@
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "DOTNET_CORE_FRAMEWORKS", "core_binary")
+
+core_binary(
+    name = "custom_bin.exe",
+    srcs = [
+        "main.cs",
+    ],
+    deps = [
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:mscorlib.dll",
+    ],
+)
